@@ -133,7 +133,7 @@ class ChatBot(Client):
             return(
                 f"The current temperature of {city} is %.1f degree celcius with {description}" % celcius_res)
 
-        def go(query):
+        def meaning(query):
 
             query = query.split(" ")
             indx = query.index("meaning")
@@ -507,7 +507,7 @@ class ChatBot(Client):
                 reply = f'Answer: {answer.replace("sqrt", "√")}'
                 sendQuery()
             elif("meaning of" in msg):
-                reply = go(msg)
+                reply = meaning(msg)
                 sendQuery()
             elif ("search user" in msg or "search friend" in msg):
                 searchForUsers(self)
@@ -585,9 +585,7 @@ class ChatBot(Client):
             elif (msg=="hi"):
                 reply = "Hello! How can I help you?"
                 sendMsg()
-            elif ("rabin" in msg):
-                reply = "Yes! How can I help you?"
-                sendMsg()
+            
 
 
         except:
