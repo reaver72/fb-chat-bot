@@ -5,15 +5,15 @@
 ## -------------->> Basic Features <<----------------------
 
 
->> To get current weather of any city
+#### To get current weather of any city
 -> weather of city_name
 returns current weather of entered city
 
->> To find the meaning of words
+#### To find the meaning of words
 -> meaning of any_word
 returns meaning of entered word
 
->> Language translation
+#### Language translation
 -> translate hello to ne
 ne(nepali)
 ja(japanese)
@@ -21,11 +21,11 @@ es(spainish)
 etc
 returns translated text of hello
 
->> get corona details
+#### get corona details
 -> corona of country_name
 returns details of corona virus
 
->> All conversion (units, currency)
+#### All conversion (units, currency)
 -> convert 1 usd to npr
 -> convert 1 cal to joule
 returns converted value
@@ -71,7 +71,7 @@ returns 5 links books of python programming book pdf
 returns image solution of entered question
 
 
-##------------->> MOST USEFUL AND MY FAVOURITE FEATURE <<------------------
+## ------------->> MOST USEFUL AND MY FAVOURITE FEATURE <<------------------
 
 
 ### Message unsent reply back feature
@@ -88,7 +88,7 @@ Same goes if they send image and unsend it.. You can view the unsent images imme
 ..etc
 
 
-##------------------->> Other small queries you can provide <<---------------------
+## ------------------->> Other small queries you can provide <<---------------------
 
 #### example:
 -> find how many grams of protein in 1 egg
