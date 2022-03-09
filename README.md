@@ -51,7 +51,7 @@ returns stepwise solution of queries
 
 
 #### Search Images (Uses Bing Search Engine)
-<< syntax >> search image image_name num_of_images(optional)
+<< syntax >> search image image_name num_of_images(optional)  
 returns 10 images by default if number not specified  
 Example:  
 -> search image laptop  
