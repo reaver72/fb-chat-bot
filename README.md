@@ -6,11 +6,12 @@
 
 
 #### To get current weather of any city
--> weather of city_name
-returns current weather of entered city
+-> weather of city_name  
+returns current weather of entered city  
 
 #### To find the meaning of words
--> meaning of any_word
+-> meaning of any_word  
+
 returns meaning of entered word
 
 #### Language translation
