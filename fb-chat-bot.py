@@ -37,6 +37,9 @@ class ChatBot(Client):
 
     def onMessage(self, mid=None, author_id=None, message_object=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
         try:
+            msg = str(message_object).split(",")[15][14:-1]
+            if ("//video.xx.fbcdn" in msg):
+                msg = msg
             msg = str(message_object).split(",")[19][20:-1]
         except:
             try:
@@ -610,7 +613,17 @@ class ChatBot(Client):
                 conn.commit()
                 conn.close()
                 unsent_msg = fetched_msg[0][1]
-                if("//scontent.xx.fbc" in unsent_msg):
+                if("//video.xx.fbcdn" in unsent_msg):
+                    reply = f"You just unsent a video"
+                    self.send(Message(text=reply), thread_id=thread_id,
+                          thread_type=thread_type)
+                    if(thread_type == ThreadType.USER):
+                        self.sendRemoteFiles(
+                        file_urls=unsent_msg, message=None, thread_id=thread_id, thread_type=ThreadType.USER)
+                    elif(thread_type == ThreadType.GROUP):
+                        self.sendRemoteFiles(
+                        file_urls=unsent_msg, message=None, thread_id=thread_id, thread_type=ThreadType.GROUP)
+                elif("//scontent.xx.fbc" in unsent_msg):
                     reply = f"You just unsent an image"
                     self.send(Message(text=reply), thread_id=thread_id,
                               thread_type=thread_type)
