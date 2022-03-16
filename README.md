@@ -6,6 +6,12 @@
 ## Disclaimer! Not responsible if any damage is done to your fb account  
 https://www.mediafire.com/file/8sskyas0dh998tv/demo.mp4/file
 
+# IMP NOTICE!
+### I recommend you to setup your account directly in heroku server  
+### For this download chrome extension named get cookie go to fb.com, login and go to get cookie extension & copy cookie from it.. 
+### run convert.py and copy cookie in terminal (ctrl+shift+v) and enter to get cookie in json format
+### rest of the process follow video from 5:12.. no need to setup on local environment
+
 
 ## -------------->> Basic Features <<----------------------
 
