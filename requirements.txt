@@ -2,6 +2,4 @@ git+https://github.com/rawbeen72/fbchat-bot@main
 wolframalpha
 requests
 selenium
-geocoder
-geopy
 webdriver_manager
