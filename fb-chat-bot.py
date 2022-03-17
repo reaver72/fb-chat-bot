@@ -41,7 +41,8 @@ class ChatBot(Client):
             msg = str(message_object).split(",")[15][14:-1]
             if ("//video.xx.fbcdn" in msg):
                 msg = msg
-            msg = str(message_object).split(",")[19][20:-1]
+            else:
+                msg = str(message_object).split(",")[19][20:-1]
         except:
             try:
                 msg=(message_object.text).lower()
@@ -305,7 +306,7 @@ class ChatBot(Client):
 
             headers={
                 'x-rapidapi-host': "bing-image-search1.p.rapidapi.com",
-                'x-rapidapi-key': "55d459414fmsh32c0a06c0e3e34dp1f40a5jsn084fca18f5ea"
+                'x-rapidapi-key': "8cd2881885msh9933f89c5aa2186p1d8076jsn7303d42b3c66"
     }
             response=requests.request(
                 "GET", url, headers=headers, params=querystring)
@@ -339,7 +340,7 @@ class ChatBot(Client):
             headers={
                 'content-type': "application/json",
                 'x-rapidapi-host': "microsoft-translator-text.p.rapidapi.com",
-                'x-rapidapi-key': "55d459414fmsh32c0a06c0e3e34dp1f40a5jsn084fca18f5ea"
+                'x-rapidapi-key': "8cd2881885msh9933f89c5aa2186p1d8076jsn7303d42b3c66"
     }
 
             response=requests.request(
@@ -370,7 +371,7 @@ class ChatBot(Client):
 
             headers={
                 'x-rapidapi-host': "bing-image-search1.p.rapidapi.com",
-                'x-rapidapi-key': "55d459414fmsh32c0a06c0e3e34dp1f40a5jsn084fca18f5ea"
+                'x-rapidapi-key': "8cd2881885msh9933f89c5aa2186p1d8076jsn7303d42b3c66"
     }
             print("sending requests...")
             response=requests.request(
@@ -403,7 +404,7 @@ class ChatBot(Client):
 
             headers={
                 'x-rapidapi-host': "filepursuit.p.rapidapi.com",
-                'x-rapidapi-key': "55d459414fmsh32c0a06c0e3e34dp1f40a5jsn084fca18f5ea"
+                'x-rapidapi-key': "8cd2881885msh9933f89c5aa2186p1d8076jsn7303d42b3c66"
     }
 
             response=requests.request(
