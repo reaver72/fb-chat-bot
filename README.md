@@ -4,6 +4,13 @@
 ### connecting your fb account tutorial video link  
 ## Video Link : https://www.mediafire.com/file/ckw3gbc20kcrbw5/fb_bot_demo.mp4/file  
 
+# IMP UPDATE!!!  
+### If u want to work bot even after fb logout.. just follow these steps:  
+### >> open private/incognito window and login facebook..
+### >> get cookie editor extension and allow the extension in private/incognito mode
+### >> get xs value from cookie editor and enter that xs value in fb-chat-bot.py instead of regular window xs value shown in video
+### >> and close the incognito window (do not logout)
+
 ## Disclaimer! Not responsible if any damage is done to your fb account  
 
 
