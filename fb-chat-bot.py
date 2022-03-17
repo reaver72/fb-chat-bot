@@ -669,9 +669,15 @@ class ChatBot(Client):
                   thread_type=thread_type)
 
 
-cookies = #your session cookies here
+cookies = {
+        "sb":"",
+        "fr":"",
+        "c_user":"",
+        "datr":"",
+        "xs":""
+       }
 
-# enter your email and password facebook
+
 client=ChatBot("",
                 "", session_cookies=cookies)
 print(client.isLoggedIn())
