@@ -1,7 +1,8 @@
 # fb-chat-bot
 ## Getting Started with fb-chat-bot
 
-### connecting your fb account video link  
+### connecting your fb account tutorial video link  
+## Video Link : https://www.mediafire.com/file/ckw3gbc20kcrbw5/fb_bot_demo.mp4/file  
 
 ## Disclaimer! Not responsible if any damage is done to your fb account  
 
