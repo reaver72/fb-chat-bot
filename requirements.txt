@@ -1,5 +1,3 @@
 git+https://github.com/rawbeen72/fbchat-bot@main
 wolframalpha
 requests
-selenium
-webdriver_manager
