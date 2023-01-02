@@ -9,6 +9,7 @@ import math
 import sqlite3
 from bs4 import BeautifulSoup
 import os
+import openai
 import concurrent.futures
 from difflib import SequenceMatcher, get_close_matches
 
@@ -19,6 +20,7 @@ class ChatBot(Client):
     def onMessage(self, mid=None, author_id=None, message_object=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
         try:
             msg = str(message_object).split(",")[15][14:-1]
+            print(msg)
 
             if ("//video.xx.fbcdn" in msg):
                 msg = msg
@@ -401,10 +403,30 @@ class ChatBot(Client):
                     self.send(Message(text=f'{file_name}\n Link: {file_url}'),
                               thread_id=thread_id, thread_type=ThreadType.USER)
 
+        def chatGPT(self, query):
+            openai.api_key = "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"
+
+            response = openai.Completion.create(
+                model="text-davinci-003",
+                prompt=query,
+                temperature=0.3,
+                max_tokens=3000,
+                top_p=1.0,
+                frequency_penalty=0.0,
+                presence_penalty=0
+            )
+            return (response["choices"][0]["text"])
        
         try:
-            if("search pdf" in msg):
+
+            if ("search pdf" in msg):
                 searchFiles(self)
+            elif ("chatgpt" in msg):
+                query = " ".join(msg.split(" ")[1:])
+                print("qur", query)
+                reply = chatGPT(self, query)
+                sendQuery()
+
             elif("download youtube" in msg):
                 headers = {
                     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
@@ -551,6 +573,7 @@ class ChatBot(Client):
         else:
             try:
                 conn = sqlite3.connect("messages.db")
+                print("connected")
                 c = conn.cursor()
                 c.execute("""
                 SELECT * FROM "{}" WHERE mid = "{}"
@@ -656,9 +679,9 @@ class ChatBot(Client):
 cookies = {
     "sb": "xasyYmAoy1tRpMGYvLxgkHBF",
     "fr": "0NxayJuewRHQ30OX3.AWVJwIYNh0Tt8AJv6kSwDamhkoM.BiMrVd.Iu.AAA.0.0.BiMtVZ.AWXMVaiHrpQ",
-    "c_user": "",
+    "c_user": "100017875800630",
     "datr": "xasyYs51GC0Lq5H5lvXTl5zA",
-    "xs": ""
+    "xs": "1%3AsvWbasjXL3GpQg%3A2%3A1669450063%3A-1%3A3592%3A%3AAcVpxcLUlDNm22sxoOnFBYD5NYLKyblt8weVk1olcDs"
 }
 
 
