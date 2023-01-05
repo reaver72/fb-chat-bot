@@ -404,12 +404,12 @@ class ChatBot(Client):
                               thread_id=thread_id, thread_type=ThreadType.USER)
 
         def chatGPT(self, query):
-            openai.api_key = "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"
+            openai.api_key = "YOUR_API_KEY"
 
             response = openai.Completion.create(
                 model="text-davinci-003",
                 prompt=query,
-                temperature=0.3,
+                temperature=0.15,
                 max_tokens=3000,
                 top_p=1.0,
                 frequency_penalty=0.0,
@@ -423,7 +423,6 @@ class ChatBot(Client):
                 searchFiles(self)
             elif ("chatgpt" in msg):
                 query = " ".join(msg.split(" ")[1:])
-                print("qur", query)
                 reply = chatGPT(self, query)
                 sendQuery()
 
@@ -679,9 +678,9 @@ class ChatBot(Client):
 cookies = {
     "sb": "xasyYmAoy1tRpMGYvLxgkHBF",
     "fr": "0NxayJuewRHQ30OX3.AWVJwIYNh0Tt8AJv6kSwDamhkoM.BiMrVd.Iu.AAA.0.0.BiMtVZ.AWXMVaiHrpQ",
-    "c_user": "100017875800630",
+    "c_user": "",
     "datr": "xasyYs51GC0Lq5H5lvXTl5zA",
-    "xs": "1%3AsvWbasjXL3GpQg%3A2%3A1669450063%3A-1%3A3592%3A%3AAcVpxcLUlDNm22sxoOnFBYD5NYLKyblt8weVk1olcDs"
+    "xs": ""
 }
 
 
