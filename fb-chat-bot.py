@@ -544,7 +544,7 @@ class ChatBot(Client):
             elif ("good morning" in msg):
                 reply = "Good Morning🌅🌺"
                 sendMsg()
-            elif ("goodnight" in msg):
+            elif ("good night" in msg):
                 reply = "good night🌃🌙"
                 sendMsg()
             elif ("good night" in msg or msg == "gn"):
